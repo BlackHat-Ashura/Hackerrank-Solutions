@@ -1,0 +1,5 @@
+def weightedMean(X, W):
+    wx = sum(list(map(lambda x,y : x*y, W, X)))
+    w = sum(W)
+    wmean = wx / w
+    print(round(wmean, 1))

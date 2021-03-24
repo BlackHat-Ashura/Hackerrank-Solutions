@@ -1,0 +1,7 @@
+def stdDev(arr):
+    n = len(arr)
+    mean = sum(arr)/n
+    sum_ = 0
+    for i in arr:
+        sum_ += (i - mean)**2
+    print(round((sum_/n)**0.5, 1))

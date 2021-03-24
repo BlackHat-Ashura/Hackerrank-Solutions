@@ -1,0 +1,36 @@
+def quartiles(arr):
+    arr = sorted(arr)
+    n = len(arr)
+
+    def odd_median(arr):
+        n = len(arr)
+        return arr[n//2]
+    def even_median(arr):
+        n = len(arr)
+        return (arr[n//2-1] + arr[n//2])/2
+
+    if n%2 == 0:
+        s1 = arr[:n//2]
+        s3 = arr[n//2:]
+        q2 = even_median(arr)
+        n1 = len(s1)
+        n3 = n + n1
+        if n1%2 == 0:
+            q1 = even_median(s1)
+            q3 = even_median(s3)
+        else:
+            q1 = odd_median(s1)
+            q3 = odd_median(s3)
+    else:
+        s1 = arr[:n//2]
+        s3 = arr[n//2 + 1:]
+        q2 = odd_median(arr)
+        n1 = len(s1)
+        n3 = n + n1 + 1
+        if n1%2 == 0:
+            q1 = even_median(s1)
+            q3 = even_median(s3)
+        else:
+            q1 = odd_median(s1)
+            q3 = odd_median(s3)
+    return [q1, q2, q3]
