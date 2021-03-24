@@ -1,0 +1,36 @@
+def MMM(n, obs):
+    mean = sum(obs)/n
+    
+    if n%2 == 0:
+        median = (sorted(obs)[n//2-1] + sorted(obs)[n//2])/2
+    else:
+        median = sorted(obs)[n//2]
+    
+    dict_ = {}
+    for i in range(n):
+        if obs[i] in dict_:
+            dict_[obs[i]] += 1
+        else:
+            dict_[obs[i]] = 1
+    max_ = 0
+    mode_list = []
+    for i in dict_:
+        if dict_[i] >= max_:
+            max_ = dict_[i]
+    for i in dict_:
+        if dict_[i] == max_:
+            mode_list.append(i)
+    mode = min(mode_list)
+    
+    res = [round(mean, 1), round(median, 1), round(mode, 1)]
+    # res = list(map(round, res, 1))
+    for i in res:
+        print(i, end='\n')
+
+if __name__ == '__main__':
+    
+    n = int(input())
+
+    obs = list(map(int, input().rstrip().split()))
+
+    result = MMM(n, obs)
