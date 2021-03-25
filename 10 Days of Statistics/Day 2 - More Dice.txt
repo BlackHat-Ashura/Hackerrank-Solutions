@@ -1,0 +1,20 @@
+In a single toss of 2 fair (evenly-weighted) six-sided dice, find the probability that the values rolled by each die will be different and the two dice have a sum of 6.
+
+
+ANSWER : 1/9
+
+'''
+SOLUTION :
+
+From a 6x6 matrix only sum = 6 and D1 != D2 are selected.
+
+..... ..... ..... ..... (1,5)
+..... ..... ..... (2,4) .....
+..... ..... ..... ..... .....
+..... (4,2) ..... ..... .....
+(5,1) ..... ..... ..... .....
+..... ..... ..... ..... .....
+
+
+P = 4/36 = 1/9
+'''
