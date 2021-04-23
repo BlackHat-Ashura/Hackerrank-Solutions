@@ -1,0 +1,2 @@
+def bitwiseAnd(N, K):
+    return K-1 if ((K-1) | K) <= N else K-2
