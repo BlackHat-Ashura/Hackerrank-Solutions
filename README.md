@@ -1,2 +1,2 @@
 # Hackerrank-Solutions
-### Hackerrank Journey
+## Hackerrank Journey
