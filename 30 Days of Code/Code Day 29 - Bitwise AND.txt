@@ -1,6 +1,5 @@
 def bitwiseAnd(N, K):
     max_ = 0
-    end_case = 0
     a = N - 1
     while(a > 0):
         for b in range(a+1, N+1):
@@ -8,9 +7,6 @@ def bitwiseAnd(N, K):
             if test < K and test > max_:
                 max_ = test
                 if max_ + 1 == K:
-                    end_case = 1
-                    break
-        if end_case == 1:
-            break
+                    return max_
         a -= 1
     return max_
