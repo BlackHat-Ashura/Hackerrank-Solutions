@@ -1,3 +1,3 @@
 # 30 Days of Code
-## Python
-## C
+Python
+C
