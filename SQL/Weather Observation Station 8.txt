@@ -1,0 +1,11 @@
+SELECT DISTINCT CITY FROM STATION
+WHERE
+CITY RLIKE "^[AEIOU]" AND
+CITY RLIKE "[AEIOU]$";
+
+
+##########################################################
+
+SELECT DISTINCT CITY FROM STATION
+WHERE
+CITY RLIKE "^[AEIOU].*[AEIOU]$";
